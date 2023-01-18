@@ -1,4 +1,5 @@
+
 {
-    "testRepo": "render-component-testcases",
-    "pathToFile": "__tests__/App.test.js"
+    "testRepo": "render-component-solution",
+    "pathToFile": "cypress/integration/tests/test.spec.js"
 }
