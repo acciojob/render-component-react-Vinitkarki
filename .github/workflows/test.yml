@@ -1,20 +1,10 @@
-name: Jest Test Run
+name: Acciojob Tests
 
 on:
-  push:
-    branches: [ "master" ]
-  pull_request:
-    branches: [ "master" ]
- 
+ push:
+    branches: [ "main","master" ]
+
 jobs:
-  build:
-
-    runs-on: ubuntu-latest
-
-    steps:
-    - uses: actions/checkout@v3
-    - name: Jest Assignment Action
-      id: assignmentAction
-      uses: acciojob/jest-github-action@v0.2
-      env:
-          ACCIO_ASGMNT_ACTION_TOKEN: ${{ secrets.ACCIO_ASGMNT_ACTION_TOKEN }}
+  calling-acciojob-main-action:
+    uses: acciojob/acciojob-tests-action/.github/workflows/main-action.yml@main
+    secrets: inherit
